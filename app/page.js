@@ -1,10 +1,7 @@
-import { Button } from '@nextui-org/button';
-import styles from './page.module.css';
+import { getSheetData } from './utils/google';
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <Button>Click me</Button>
-    </main>
-  );
+export default async function Home() {
+  const today = await getSheetData({ sheetName: '2024.04' });
+
+  return <main></main>;
 }
